@@ -1,20 +1,22 @@
 
 import { useState, useEffect } from 'react';
-import { Menu, X } from 'lucide-react';
+import { Menu, X, Globe } from 'lucide-react';
 import { cn } from '@/lib/utils';
-
-const navLinks = [
-  { name: 'Home', href: '#hero' },
-  { name: 'About', href: '#about' },
-  { name: 'Solutions', href: '#services' },
-  { name: 'Industries', href: '#industries' },
-  { name: 'Why Us', href: '#features' },
-  { name: 'Contact', href: '#contact' },
-];
+import { useLanguage } from '@/contexts/LanguageContext';
 
 export default function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
   const [isScrolled, setIsScrolled] = useState(false);
+  const { language, t, toggleLanguage } = useLanguage();
+
+  const navLinks = [
+    { name: t('home'), href: '#hero' },
+    { name: t('about'), href: '#about' },
+    { name: t('solutions'), href: '#services' },
+    { name: t('industries'), href: '#industries' },
+    { name: t('whyUs'), href: '#features' },
+    { name: t('contact'), href: '#contact' },
+  ];
 
   useEffect(() => {
     const handleScroll = () => {
@@ -44,7 +46,7 @@ export default function Navbar() {
           </div>
 
           {/* Desktop Navigation */}
-          <div className="hidden md:block">
+          <div className="hidden md:flex items-center">
             <ul className="flex space-x-8">
               {navLinks.map((link) => (
                 <li key={link.name}>
@@ -57,6 +59,15 @@ export default function Navbar() {
                 </li>
               ))}
             </ul>
+            
+            {/* Language Toggle */}
+            <button 
+              onClick={toggleLanguage}
+              className="ml-8 flex items-center gap-2 px-3 py-1.5 rounded-full bg-braindark-800/80 hover:bg-braindark-700/80 border border-braindark-700 text-gray-300 hover:text-white transition-colors duration-300 text-sm"
+            >
+              <Globe className="w-3.5 h-3.5" />
+              <span>{t('changeLanguage')}</span>
+            </button>
           </div>
 
           {/* Mobile Navigation Toggle */}
@@ -76,7 +87,7 @@ export default function Navbar() {
 
         {/* Mobile Navigation Menu */}
         {isOpen && (
-          <div className="md:hidden mt-4 pb-4 animate-fade-in">
+          <div className="md:hidden mt-4 pb-4">
             <ul className="flex flex-col space-y-4">
               {navLinks.map((link) => (
                 <li key={link.name}>
@@ -89,6 +100,17 @@ export default function Navbar() {
                   </a>
                 </li>
               ))}
+              
+              {/* Mobile Language Toggle */}
+              <li>
+                <button 
+                  onClick={toggleLanguage}
+                  className="flex items-center gap-2 px-3 py-1.5 rounded-full bg-braindark-800/80 hover:bg-braindark-700/80 border border-braindark-700 text-gray-300 hover:text-white transition-colors duration-300 text-sm"
+                >
+                  <Globe className="w-3.5 h-3.5" />
+                  <span>{t('changeLanguage')}</span>
+                </button>
+              </li>
             </ul>
           </div>
         )}

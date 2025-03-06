@@ -1,9 +1,69 @@
 
 import React, { useState } from 'react';
 import { Landmark, HeartPulse, ShoppingBag, Factory, BarChart3 } from 'lucide-react';
+import { useLanguage } from '@/contexts/LanguageContext';
 
 const IndustriesSection: React.FC = () => {
+  const { t } = useLanguage();
   const [activeIndustry, setActiveIndustry] = useState(0);
+
+  const industries = [
+    {
+      icon: Landmark,
+      name: t('finance'),
+      description: t('financeDesc'),
+      applications: [
+        "Fraud detection and prevention",
+        "Risk assessment and management",
+        "Automated trading and investment analysis",
+        "Personalized banking experiences"
+      ]
+    },
+    {
+      icon: HeartPulse,
+      name: t('healthcare'),
+      description: t('healthcareDesc'),
+      applications: [
+        "Medical imaging analysis and diagnostics",
+        "Patient data insights and predictive analytics",
+        "Drug discovery and development",
+        "Virtual health assistants and monitoring"
+      ]
+    },
+    {
+      icon: ShoppingBag,
+      name: t('retail'),
+      description: t('retailDesc'),
+      applications: [
+        "Personalized shopping recommendations",
+        "Inventory optimization and demand forecasting",
+        "Visual search and product recognition",
+        "Customer sentiment analysis"
+      ]
+    },
+    {
+      icon: Factory,
+      name: t('manufacturing'),
+      description: t('manufacturingDesc'),
+      applications: [
+        "Predictive maintenance to reduce downtime",
+        "Quality control and defect detection",
+        "Supply chain optimization",
+        "Process automation and efficiency"
+      ]
+    },
+    {
+      icon: BarChart3,
+      name: t('marketing'),
+      description: t('marketingDesc'),
+      applications: [
+        "Customer segmentation and targeting",
+        "Lead scoring and prioritization",
+        "Content optimization and personalization",
+        "Campaign performance analysis"
+      ]
+    }
+  ];
 
   // Get the current industry icon component
   const ActiveIndustryIcon = industries[activeIndustry].icon;
@@ -12,12 +72,12 @@ const IndustriesSection: React.FC = () => {
     <section id="industries" className="py-20 bg-braindark-950/50">
       <div className="container mx-auto px-4">
         <div className="text-center mb-16">
-          <p className="text-brainblue-400 font-medium mb-2">Industries We Serve</p>
+          <p className="text-brainblue-400 font-medium mb-2">{t('industriesWeServe')}</p>
           <h2 className="text-4xl font-bold mb-4 text-white">
-            AI Solutions for <span className="text-transparent bg-clip-text bg-gradient-to-r from-brainblue-400 to-neon-purple">Every Industry</span>
+            {t('aiForEveryIndustry')} <span className="text-transparent bg-clip-text bg-gradient-to-r from-brainblue-400 to-neon-purple">{t('everyIndustry')}</span>
           </h2>
           <p className="text-gray-400 max-w-3xl mx-auto">
-            Our tailored AI technologies drive transformation across diverse sectors, addressing industry-specific challenges with innovative solutions.
+            {t('industriesDescription')}
           </p>
         </div>
 
@@ -53,7 +113,7 @@ const IndustriesSection: React.FC = () => {
                 </div>
                 <p className="text-gray-400 mb-6">{industries[activeIndustry].description}</p>
                 
-                <h4 className="text-lg font-medium mb-3 text-white">Key Applications:</h4>
+                <h4 className="text-lg font-medium mb-3 text-white">{t('keyApplications')}</h4>
                 <ul className="space-y-3">
                   {industries[activeIndustry].applications.map((app, index) => (
                     <li key={index} className="flex items-start gap-3">
@@ -75,7 +135,7 @@ const IndustriesSection: React.FC = () => {
                   <div className="absolute inset-x-0 bottom-0 h-1/2 bg-gradient-to-t from-braindark-900 to-transparent"></div>
                   <div className="absolute inset-0 border border-braindark-700 rounded-xl"></div>
                   <div className="absolute bottom-6 inset-x-0 text-center">
-                    <span className="text-sm text-gray-400">Transforming {industries[activeIndustry].name} with AI</span>
+                    <span className="text-sm text-gray-400">{t('transformingWith')} {industries[activeIndustry].name} {t('withAI')}</span>
                   </div>
                 </div>
               </div>
@@ -86,63 +146,5 @@ const IndustriesSection: React.FC = () => {
     </section>
   );
 };
-
-const industries = [
-  {
-    icon: Landmark,
-    name: "Finance",
-    description: "Revolutionize financial services with AI solutions that enhance security, improve customer experiences, and optimize operations.",
-    applications: [
-      "Fraud detection and prevention",
-      "Risk assessment and management",
-      "Automated trading and investment analysis",
-      "Personalized banking experiences"
-    ]
-  },
-  {
-    icon: HeartPulse,
-    name: "Healthcare",
-    description: "Transform patient care and medical research with AI technologies that improve diagnosis, treatment, and operational efficiency.",
-    applications: [
-      "Medical imaging analysis and diagnostics",
-      "Patient data insights and predictive analytics",
-      "Drug discovery and development",
-      "Virtual health assistants and monitoring"
-    ]
-  },
-  {
-    icon: ShoppingBag,
-    name: "Retail & E-commerce",
-    description: "Enhance the shopping experience with AI-powered personalization, inventory management, and customer engagement solutions.",
-    applications: [
-      "Personalized shopping recommendations",
-      "Inventory optimization and demand forecasting",
-      "Visual search and product recognition",
-      "Customer sentiment analysis"
-    ]
-  },
-  {
-    icon: Factory,
-    name: "Manufacturing",
-    description: "Optimize production processes, ensure quality control, and predict maintenance needs with our industrial AI solutions.",
-    applications: [
-      "Predictive maintenance to reduce downtime",
-      "Quality control and defect detection",
-      "Supply chain optimization",
-      "Process automation and efficiency"
-    ]
-  },
-  {
-    icon: BarChart3,
-    name: "Marketing & Sales",
-    description: "Drive revenue growth with AI-powered marketing automation, customer insights, and sales optimization strategies.",
-    applications: [
-      "Customer segmentation and targeting",
-      "Lead scoring and prioritization",
-      "Content optimization and personalization",
-      "Campaign performance analysis"
-    ]
-  }
-];
 
 export default IndustriesSection;

@@ -1,8 +1,10 @@
-
 import React from 'react';
 import { ArrowRight, Brain, Zap, Database, Shield } from 'lucide-react';
+import { useLanguage } from '@/contexts/LanguageContext';
 
 const HeroSection: React.FC = () => {
+  const { t } = useLanguage();
+  
   return (
     <section id="hero" className="min-h-screen flex items-center pt-20 relative overflow-hidden">
       {/* Background Elements */}
@@ -13,31 +15,31 @@ const HeroSection: React.FC = () => {
       <div className="container mx-auto px-6 relative z-10">
         <div className="flex flex-col lg:flex-row items-center gap-12">
           <div className="flex-1 max-w-2xl">
-            <div className="space-y-6 animate-fade-in">
+            <div className="space-y-6">
               <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-braindark-800 border border-braindark-700 text-brainblue-400 text-sm">
                 <span className="relative flex h-2 w-2">
                   <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-brainblue-400 opacity-75"></span>
                   <span className="relative inline-flex rounded-full h-2 w-2 bg-brainblue-500"></span>
                 </span>
-                <span>Advanced AI Technology</span>
+                <span>{t('heroTagline')}</span>
               </div>
               
               <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold tracking-tight">
-                Empower Intelligence. <br/>
-                <span className="heading-gradient">Transform the Future.</span>
+                {t('heroTitle')} <br/>
+                <span className="heading-gradient">{t('heroTitleGradient')}</span>
               </h1>
               
               <p className="text-lg text-gray-300">
-                Brain Army AI leverages the power of artificial intelligence to optimize decision-making, automate processes, and revolutionize industries.
+                {t('heroDescription')}
               </p>
               
               <div className="flex flex-wrap gap-4 pt-2">
                 <a href="#contact" className="btn-primary group">
-                  Get Started
+                  {t('getStarted')}
                   <ArrowRight className="ml-2 h-4 w-4 transition-transform group-hover:translate-x-1" />
                 </a>
                 <a href="#services" className="btn-outline">
-                  View Solutions
+                  {t('viewSolutions')}
                 </a>
               </div>
               
@@ -47,32 +49,32 @@ const HeroSection: React.FC = () => {
                   <div className="w-12 h-12 rounded-lg glass-card flex items-center justify-center text-brainblue-400 mb-2">
                     <Brain className="h-6 w-6" />
                   </div>
-                  <span className="text-xs text-gray-400">Machine Learning</span>
+                  <span className="text-xs text-gray-400">{t('machineLearning')}</span>
                 </div>
                 <div className="flex flex-col items-center">
                   <div className="w-12 h-12 rounded-lg glass-card flex items-center justify-center text-neon-blue mb-2">
                     <Zap className="h-6 w-6" />
                   </div>
-                  <span className="text-xs text-gray-400">AI Automation</span>
+                  <span className="text-xs text-gray-400">{t('aiAutomation')}</span>
                 </div>
                 <div className="flex flex-col items-center">
                   <div className="w-12 h-12 rounded-lg glass-card flex items-center justify-center text-neon-purple mb-2">
                     <Database className="h-6 w-6" />
                   </div>
-                  <span className="text-xs text-gray-400">Predictive Analytics</span>
+                  <span className="text-xs text-gray-400">{t('predictiveAnalytics')}</span>
                 </div>
                 <div className="flex flex-col items-center">
                   <div className="w-12 h-12 rounded-lg glass-card flex items-center justify-center text-neon-green mb-2">
                     <Shield className="h-6 w-6" />
                   </div>
-                  <span className="text-xs text-gray-400">AI Ethics</span>
+                  <span className="text-xs text-gray-400">{t('aiEthics')}</span>
                 </div>
               </div>
             </div>
           </div>
           
           {/* Hero Graphic */}
-          <div className="flex-1 flex justify-center lg:justify-end animate-fade-in" style={{ animationDelay: '0.2s' }}>
+          <div className="flex-1 flex justify-center lg:justify-end" style={{ animationDelay: '0.2s' }}>
             <div className="relative">
               <div className="w-72 h-72 md:w-96 md:h-96 bg-gradient-to-br from-brainblue-700/20 to-neon-purple/20 rounded-full absolute filter blur-3xl"></div>
               <div className="w-72 h-72 md:w-96 md:h-96 relative">

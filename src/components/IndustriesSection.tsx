@@ -9,14 +9,14 @@ const IndustriesSection: React.FC = () => {
   const ActiveIndustryIcon = industries[activeIndustry].icon;
 
   return (
-    <section id="industries" className="py-20">
-      <div className="section-container">
+    <section id="industries" className="py-20 bg-braindark-950/50">
+      <div className="container mx-auto px-4">
         <div className="text-center mb-16 animate-fade-in">
-          <p className="section-title">Industries We Serve</p>
-          <h2 className="section-heading">
-            AI Solutions for <span className="heading-gradient">Every Industry</span>
+          <p className="text-brainblue-400 font-medium mb-2">Industries We Serve</p>
+          <h2 className="text-4xl font-bold mb-4 text-white">
+            AI Solutions for <span className="text-transparent bg-clip-text bg-gradient-to-r from-brainblue-400 to-neon-purple">Every Industry</span>
           </h2>
-          <p className="section-description mx-auto">
+          <p className="text-gray-400 max-w-3xl mx-auto">
             Our tailored AI technologies drive transformation across diverse sectors, addressing industry-specific challenges with innovative solutions.
           </p>
         </div>
@@ -32,7 +32,7 @@ const IndustriesSection: React.FC = () => {
                   className={`flex items-center gap-3 p-4 rounded-lg transition-all duration-300 whitespace-nowrap ${
                     activeIndustry === index
                       ? 'bg-brainblue-900/30 border border-brainblue-700/50 text-white'
-                      : 'glass-card border-transparent hover:border-braindark-700 text-gray-400 hover:text-gray-300'
+                      : 'bg-braindark-900/50 backdrop-blur-sm border border-transparent hover:border-braindark-700 text-gray-400 hover:text-gray-300'
                   }`}
                   onClick={() => setActiveIndustry(index)}
                 >
@@ -44,12 +44,12 @@ const IndustriesSection: React.FC = () => {
           </div>
           
           {/* Industry Content */}
-          <div className="lg:col-span-9 glass-card p-8 rounded-xl border border-braindark-800 animate-fade-in">
+          <div className="lg:col-span-9 bg-braindark-900/50 backdrop-blur-sm p-8 rounded-xl border border-braindark-800 animate-fade-in">
             <div className="flex flex-col md:flex-row gap-8">
               <div className="flex-1">
                 <div className="flex items-center gap-3 mb-4">
                   <ActiveIndustryIcon className="w-6 h-6 text-brainblue-400" />
-                  <h3 className="text-2xl font-bold">{industries[activeIndustry].name}</h3>
+                  <h3 className="text-2xl font-bold text-white">{industries[activeIndustry].name}</h3>
                 </div>
                 <p className="text-gray-400 mb-6">{industries[activeIndustry].description}</p>
                 

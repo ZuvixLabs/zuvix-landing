@@ -5,6 +5,9 @@ import { Landmark, HeartPulse, ShoppingBag, Factory, BarChart3 } from 'lucide-re
 const IndustriesSection: React.FC = () => {
   const [activeIndustry, setActiveIndustry] = useState(0);
 
+  // Get the current industry icon component
+  const ActiveIndustryIcon = industries[activeIndustry].icon;
+
   return (
     <section id="industries" className="py-20">
       <div className="section-container">
@@ -21,20 +24,23 @@ const IndustriesSection: React.FC = () => {
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-8">
           {/* Industry Selector */}
           <div className="lg:col-span-3 flex lg:flex-col gap-3 overflow-x-auto lg:overflow-visible pb-4 lg:pb-0 animate-fade-in">
-            {industries.map((industry, index) => (
-              <button
-                key={industry.name}
-                className={`flex items-center gap-3 p-4 rounded-lg transition-all duration-300 whitespace-nowrap ${
-                  activeIndustry === index
-                    ? 'bg-brainblue-900/30 border border-brainblue-700/50 text-white'
-                    : 'glass-card border-transparent hover:border-braindark-700 text-gray-400 hover:text-gray-300'
-                }`}
-                onClick={() => setActiveIndustry(index)}
-              >
-                <industry.icon className={`w-5 h-5 ${activeIndustry === index ? 'text-brainblue-400' : 'text-gray-500'}`} />
-                <span>{industry.name}</span>
-              </button>
-            ))}
+            {industries.map((industry, index) => {
+              const IndustryIcon = industry.icon;
+              return (
+                <button
+                  key={industry.name}
+                  className={`flex items-center gap-3 p-4 rounded-lg transition-all duration-300 whitespace-nowrap ${
+                    activeIndustry === index
+                      ? 'bg-brainblue-900/30 border border-brainblue-700/50 text-white'
+                      : 'glass-card border-transparent hover:border-braindark-700 text-gray-400 hover:text-gray-300'
+                  }`}
+                  onClick={() => setActiveIndustry(index)}
+                >
+                  <IndustryIcon className={`w-5 h-5 ${activeIndustry === index ? 'text-brainblue-400' : 'text-gray-500'}`} />
+                  <span>{industry.name}</span>
+                </button>
+              );
+            })}
           </div>
           
           {/* Industry Content */}
@@ -42,7 +48,7 @@ const IndustriesSection: React.FC = () => {
             <div className="flex flex-col md:flex-row gap-8">
               <div className="flex-1">
                 <div className="flex items-center gap-3 mb-4">
-                  <industries[activeIndustry].icon className="w-6 h-6 text-brainblue-400" />
+                  <ActiveIndustryIcon className="w-6 h-6 text-brainblue-400" />
                   <h3 className="text-2xl font-bold">{industries[activeIndustry].name}</h3>
                 </div>
                 <p className="text-gray-400 mb-6">{industries[activeIndustry].description}</p>
@@ -64,7 +70,7 @@ const IndustriesSection: React.FC = () => {
                 <div className="w-full h-64 rounded-xl overflow-hidden relative">
                   <div className="absolute inset-0 bg-gradient-to-br from-brainblue-800/20 to-neon-purple/10 animate-pulse-slow"></div>
                   <div className="absolute inset-0 flex items-center justify-center p-8">
-                    <industries[activeIndustry].icon className="w-24 h-24 text-brainblue-300/30" />
+                    <ActiveIndustryIcon className="w-24 h-24 text-brainblue-300/30" />
                   </div>
                   <div className="absolute inset-x-0 bottom-0 h-1/2 bg-gradient-to-t from-braindark-900 to-transparent"></div>
                   <div className="absolute inset-0 border border-braindark-700 rounded-xl"></div>

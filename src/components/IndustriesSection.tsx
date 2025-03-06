@@ -11,7 +11,7 @@ const IndustriesSection: React.FC = () => {
   return (
     <section id="industries" className="py-20 bg-braindark-950/50">
       <div className="container mx-auto px-4">
-        <div className="text-center mb-16 animate-fade-in">
+        <div className="text-center mb-16">
           <p className="text-brainblue-400 font-medium mb-2">Industries We Serve</p>
           <h2 className="text-4xl font-bold mb-4 text-white">
             AI Solutions for <span className="text-transparent bg-clip-text bg-gradient-to-r from-brainblue-400 to-neon-purple">Every Industry</span>
@@ -23,7 +23,7 @@ const IndustriesSection: React.FC = () => {
 
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-8">
           {/* Industry Selector */}
-          <div className="lg:col-span-3 flex lg:flex-col gap-3 overflow-x-auto lg:overflow-visible pb-4 lg:pb-0 animate-fade-in">
+          <div className="lg:col-span-3 flex lg:flex-col gap-3 overflow-x-auto lg:overflow-visible pb-4 lg:pb-0">
             {industries.map((industry, index) => {
               const IndustryIcon = industry.icon;
               return (
@@ -44,7 +44,7 @@ const IndustriesSection: React.FC = () => {
           </div>
           
           {/* Industry Content */}
-          <div className="lg:col-span-9 bg-braindark-900/50 backdrop-blur-sm p-8 rounded-xl border border-braindark-800 animate-fade-in">
+          <div className="lg:col-span-9 bg-braindark-900/50 backdrop-blur-sm p-8 rounded-xl border border-braindark-800">
             <div className="flex flex-col md:flex-row gap-8">
               <div className="flex-1">
                 <div className="flex items-center gap-3 mb-4">

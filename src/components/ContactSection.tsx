@@ -1,8 +1,10 @@
 
 import React, { useState } from 'react';
 import { Send, Mail, Phone, MapPin } from 'lucide-react';
+import { useLanguage } from '@/contexts/LanguageContext';
 
 const ContactSection: React.FC = () => {
+  const { t } = useLanguage();
   const [formState, setFormState] = useState({
     name: '',
     email: '',
@@ -46,12 +48,12 @@ const ContactSection: React.FC = () => {
       
       <div className="section-container relative z-10">
         <div className="text-center mb-16 animate-fade-in">
-          <p className="section-title">Get In Touch</p>
+          <p className="section-title">{t('getInTouch')}</p>
           <h2 className="section-heading">
-            Start Your <span className="heading-gradient">AI Journey</span> Today
+            {t('startYourAI')} <span className="heading-gradient">{t('aiJourney')}</span> {t('today')}
           </h2>
           <p className="section-description mx-auto">
-            Ready to explore how AI can transform your business? Our team of experts is here to help. Reach out to us for a personalized consultation.
+            {t('contactDescription')}
           </p>
         </div>
         
@@ -59,9 +61,9 @@ const ContactSection: React.FC = () => {
           {/* Contact Information */}
           <div className="lg:col-span-2 animate-fade-in">
             <div className="glass-card p-8 rounded-xl h-full">
-              <h3 className="text-2xl font-bold mb-6">Contact Information</h3>
+              <h3 className="text-2xl font-bold mb-6">{t('contactInfo')}</h3>
               <p className="text-gray-400 mb-8">
-                Have questions or ready to get started? Connect with our team through any of these channels.
+                {t('contactInfoDesc')}
               </p>
               
               <div className="space-y-6">
@@ -70,7 +72,7 @@ const ContactSection: React.FC = () => {
                     <Mail className="w-5 h-5 text-brainblue-400" />
                   </div>
                   <div>
-                    <h4 className="text-gray-200 font-medium">Email Us</h4>
+                    <h4 className="text-gray-200 font-medium">{t('emailUs')}</h4>
                     <a href="mailto:info@brainarmy.ai" className="text-brainblue-400 hover:text-brainblue-300 transition-colors">
                       info@brainarmy.ai
                     </a>
@@ -82,7 +84,7 @@ const ContactSection: React.FC = () => {
                     <Phone className="w-5 h-5 text-brainblue-400" />
                   </div>
                   <div>
-                    <h4 className="text-gray-200 font-medium">Call Us</h4>
+                    <h4 className="text-gray-200 font-medium">{t('callUs')}</h4>
                     <a href="tel:+18005555555" className="text-brainblue-400 hover:text-brainblue-300 transition-colors">
                       +1 (800) 555-5555
                     </a>
@@ -94,7 +96,7 @@ const ContactSection: React.FC = () => {
                     <MapPin className="w-5 h-5 text-brainblue-400" />
                   </div>
                   <div>
-                    <h4 className="text-gray-200 font-medium">Visit Us</h4>
+                    <h4 className="text-gray-200 font-medium">{t('visitUs')}</h4>
                     <p className="text-gray-400">
                       101 Innovation Boulevard<br />
                       San Francisco, CA 94103
@@ -104,7 +106,7 @@ const ContactSection: React.FC = () => {
               </div>
               
               <div className="mt-10">
-                <h4 className="text-gray-200 font-medium mb-4">Follow Us</h4>
+                <h4 className="text-gray-200 font-medium mb-4">{t('followUs')}</h4>
                 <div className="flex gap-4">
                   {['twitter', 'linkedin', 'facebook', 'github'].map((social) => (
                     <a 
@@ -123,23 +125,23 @@ const ContactSection: React.FC = () => {
           {/* Contact Form */}
           <div className="lg:col-span-3 animate-fade-in" style={{ animationDelay: '0.2s' }}>
             <div className="glass-card p-8 rounded-xl">
-              <h3 className="text-2xl font-bold mb-6">Send Us a Message</h3>
+              <h3 className="text-2xl font-bold mb-6">{t('sendMessage')}</h3>
               
               {isSubmitted ? (
                 <div className="bg-brainblue-900/30 border border-brainblue-700/30 rounded-lg p-6 text-center">
                   <div className="w-16 h-16 rounded-full bg-brainblue-900/50 border border-brainblue-700/30 flex items-center justify-center mx-auto mb-4">
                     <Send className="w-8 h-8 text-brainblue-400" />
                   </div>
-                  <h4 className="text-xl font-bold text-white mb-2">Message Sent!</h4>
+                  <h4 className="text-xl font-bold text-white mb-2">{t('messageSent')}</h4>
                   <p className="text-gray-300">
-                    Thank you for reaching out. Our team will get back to you shortly.
+                    {t('thankYou')}
                   </p>
                 </div>
               ) : (
                 <form onSubmit={handleSubmit} className="space-y-6">
                   <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                     <div>
-                      <label htmlFor="name" className="text-sm text-gray-300 block mb-2">Your Name</label>
+                      <label htmlFor="name" className="text-sm text-gray-300 block mb-2">{t('yourName')}</label>
                       <input
                         type="text"
                         id="name"
@@ -152,7 +154,7 @@ const ContactSection: React.FC = () => {
                       />
                     </div>
                     <div>
-                      <label htmlFor="email" className="text-sm text-gray-300 block mb-2">Email Address</label>
+                      <label htmlFor="email" className="text-sm text-gray-300 block mb-2">{t('emailAddress')}</label>
                       <input
                         type="email"
                         id="email"
@@ -167,7 +169,7 @@ const ContactSection: React.FC = () => {
                   </div>
                   
                   <div>
-                    <label htmlFor="company" className="text-sm text-gray-300 block mb-2">Company (Optional)</label>
+                    <label htmlFor="company" className="text-sm text-gray-300 block mb-2">{t('company')}</label>
                     <input
                       type="text"
                       id="company"
@@ -175,12 +177,12 @@ const ContactSection: React.FC = () => {
                       value={formState.company}
                       onChange={handleChange}
                       className="w-full px-4 py-3 rounded-lg bg-braindark-800 border border-braindark-700 text-white focus:border-brainblue-600 transition-colors"
-                      placeholder="Your company name"
+                      placeholder={t('companyPlaceholder')}
                     />
                   </div>
                   
                   <div>
-                    <label htmlFor="message" className="text-sm text-gray-300 block mb-2">Message</label>
+                    <label htmlFor="message" className="text-sm text-gray-300 block mb-2">{t('message')}</label>
                     <textarea
                       id="message"
                       name="message"
@@ -189,7 +191,7 @@ const ContactSection: React.FC = () => {
                       required
                       rows={5}
                       className="w-full px-4 py-3 rounded-lg bg-braindark-800 border border-braindark-700 text-white focus:border-brainblue-600 transition-colors resize-none"
-                      placeholder="How can we help you?"
+                      placeholder={t('messagePlaceholder')}
                     ></textarea>
                   </div>
                   
@@ -205,11 +207,11 @@ const ContactSection: React.FC = () => {
                             <circle className="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" strokeWidth="4"></circle>
                             <path className="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z"></path>
                           </svg>
-                          Sending...
+                          {t('sending')}
                         </span>
                       ) : (
                         <span className="flex items-center justify-center">
-                          Send Message
+                          {t('sendMessage')}
                           <Send className="ml-2 h-4 w-4 transition-transform group-hover:translate-x-1" />
                         </span>
                       )}

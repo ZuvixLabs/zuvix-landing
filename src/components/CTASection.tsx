@@ -1,8 +1,11 @@
 
 import React from 'react';
 import { ArrowRight } from 'lucide-react';
+import { useLanguage } from '@/contexts/LanguageContext';
 
 const CTASection: React.FC = () => {
+  const { t } = useLanguage();
+  
   return (
     <section className="py-20 relative overflow-hidden">
       <div className="absolute inset-0 bg-hero-pattern opacity-30"></div>
@@ -14,19 +17,19 @@ const CTASection: React.FC = () => {
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
             <div>
               <h2 className="text-3xl md:text-4xl font-bold mb-4">
-                Ready to <span className="heading-gradient">Revolutionize</span> Your Business with AI?
+                {t('readyToRevolutionize')} <span className="heading-gradient">{t('revolutionize')}</span> {t('yourBusiness')}
               </h2>
               <p className="text-gray-300 mb-8">
-                Join leading organizations that are transforming their operations and driving innovation with Brain Army AI solutions.
+                {t('ctaDescription')}
               </p>
               
               <div className="flex flex-wrap gap-4">
                 <a href="#contact" className="btn-primary group">
-                  Request a Demo
+                  {t('requestDemo')}
                   <ArrowRight className="ml-2 h-4 w-4 transition-transform group-hover:translate-x-1" />
                 </a>
                 <a href="#contact" className="btn-outline">
-                  Talk to an Expert
+                  {t('talkToExpert')}
                 </a>
               </div>
             </div>
@@ -51,7 +54,7 @@ const CTASection: React.FC = () => {
                     </svg>
                     <div className="absolute inset-0 flex items-center justify-center flex-col">
                       <span className="text-5xl font-bold text-gradient">75%</span>
-                      <span className="text-sm text-gray-400">Average ROI</span>
+                      <span className="text-sm text-gray-400">{t('averageROI')}</span>
                     </div>
                   </div>
                   
@@ -60,7 +63,7 @@ const CTASection: React.FC = () => {
                     <div className="glass-card rounded-lg p-3 border border-braindark-700">
                       <div className="flex items-center gap-2">
                         <div className="w-2 h-2 rounded-full bg-neon-blue"></div>
-                        <span className="text-sm font-medium text-white">+60% Efficiency</span>
+                        <span className="text-sm font-medium text-white">{t('efficiency')}</span>
                       </div>
                     </div>
                   </div>
@@ -69,7 +72,7 @@ const CTASection: React.FC = () => {
                     <div className="glass-card rounded-lg p-3 border border-braindark-700">
                       <div className="flex items-center gap-2">
                         <div className="w-2 h-2 rounded-full bg-neon-green"></div>
-                        <span className="text-sm font-medium text-white">48% Cost Reduction</span>
+                        <span className="text-sm font-medium text-white">{t('costReduction')}</span>
                       </div>
                     </div>
                   </div>
@@ -78,7 +81,7 @@ const CTASection: React.FC = () => {
                     <div className="glass-card rounded-lg p-3 border border-braindark-700">
                       <div className="flex items-center gap-2">
                         <div className="w-2 h-2 rounded-full bg-neon-purple"></div>
-                        <span className="text-sm font-medium text-white">89% Accuracy</span>
+                        <span className="text-sm font-medium text-white">{t('accuracy')}</span>
                       </div>
                     </div>
                   </div>

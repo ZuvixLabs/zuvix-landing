@@ -1,7 +1,9 @@
 
 import React from 'react';
+import { useLanguage } from '@/contexts/LanguageContext';
 
 const Footer: React.FC = () => {
+  const { t } = useLanguage();
   const currentYear = new Date().getFullYear();
   
   return (
@@ -16,7 +18,7 @@ const Footer: React.FC = () => {
               <span className="text-xl font-bold text-white">Brain Army AI</span>
             </div>
             <p className="text-gray-400 mb-6 max-w-sm">
-              Empowering businesses with intelligent solutions that drive transformation and growth through cutting-edge artificial intelligence.
+              {t('empoweringBusinesses')}
             </p>
             <div className="flex gap-4">
               {['twitter', 'linkedin', 'facebook', 'github'].map((social) => (
@@ -32,12 +34,17 @@ const Footer: React.FC = () => {
           </div>
           
           <div>
-            <h4 className="text-white font-semibold mb-4">Solutions</h4>
+            <h4 className="text-white font-semibold mb-4">{t('solutions')}</h4>
             <ul className="space-y-3">
-              {['AI Automation', 'Predictive Analytics', 'Conversational AI', 'AI Consulting'].map((item) => (
-                <li key={item}>
-                  <a href="#services" className="text-gray-400 hover:text-brainblue-400 transition-colors">
-                    {item}
+              {[
+                { key: 'aiPoweredAutomation', href: '#services' },
+                { key: 'predAnalyticsTitle', href: '#services' },
+                { key: 'conversationalAI', href: '#services' },
+                { key: 'aiConsulting', href: '#services' }
+              ].map((item) => (
+                <li key={item.key}>
+                  <a href={item.href} className="text-gray-400 hover:text-brainblue-400 transition-colors">
+                    {t(item.key)}
                   </a>
                 </li>
               ))}
@@ -45,12 +52,18 @@ const Footer: React.FC = () => {
           </div>
           
           <div>
-            <h4 className="text-white font-semibold mb-4">Industries</h4>
+            <h4 className="text-white font-semibold mb-4">{t('industries')}</h4>
             <ul className="space-y-3">
-              {['Finance', 'Healthcare', 'Retail', 'Manufacturing', 'Marketing'].map((item) => (
-                <li key={item}>
-                  <a href="#industries" className="text-gray-400 hover:text-brainblue-400 transition-colors">
-                    {item}
+              {[
+                { key: 'finance', href: '#industries' },
+                { key: 'healthcare', href: '#industries' },
+                { key: 'retail', href: '#industries' },
+                { key: 'manufacturing', href: '#industries' },
+                { key: 'marketing', href: '#industries' }
+              ].map((item) => (
+                <li key={item.key}>
+                  <a href={item.href} className="text-gray-400 hover:text-brainblue-400 transition-colors">
+                    {t(item.key)}
                   </a>
                 </li>
               ))}
@@ -58,12 +71,16 @@ const Footer: React.FC = () => {
           </div>
           
           <div>
-            <h4 className="text-white font-semibold mb-4">Company</h4>
+            <h4 className="text-white font-semibold mb-4">{t('about')}</h4>
             <ul className="space-y-3">
-              {['About Us', 'Careers', 'Blog', 'Contact'].map((item) => (
-                <li key={item}>
-                  <a href={item === 'Contact' ? '#contact' : '#'} className="text-gray-400 hover:text-brainblue-400 transition-colors">
-                    {item}
+              {[
+                { key: 'aboutUs', href: '#about' },
+                { key: 'whyChooseUs', href: '#features' },
+                { key: 'getInTouch', href: '#contact' }
+              ].map((item) => (
+                <li key={item.key}>
+                  <a href={item.href} className="text-gray-400 hover:text-brainblue-400 transition-colors">
+                    {t(item.key)}
                   </a>
                 </li>
               ))}
@@ -74,12 +91,16 @@ const Footer: React.FC = () => {
         <div className="mt-12 pt-8 border-t border-braindark-800">
           <div className="flex flex-col md:flex-row justify-between items-center">
             <p className="text-gray-500 text-sm mb-4 md:mb-0">
-              &copy; {currentYear} Brain Army AI. All rights reserved.
+              &copy; {currentYear} Brain Army AI. {t('allRightsReserved')}
             </p>
             <div className="flex gap-6">
-              {['Privacy Policy', 'Terms of Service', 'Cookie Policy'].map((item) => (
-                <a key={item} href="#" className="text-gray-500 hover:text-brainblue-400 text-sm transition-colors">
-                  {item}
+              {[
+                { key: 'privacyPolicy', href: '#' },
+                { key: 'termsOfService', href: '#' },
+                { key: 'cookiePolicy', href: '#' }
+              ].map((item) => (
+                <a key={item.key} href={item.href} className="text-gray-500 hover:text-brainblue-400 text-sm transition-colors">
+                  {t(item.key)}
                 </a>
               ))}
             </div>

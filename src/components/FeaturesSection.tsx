@@ -1,27 +1,30 @@
 
 import React from 'react';
 import { Shield, Scale, Award, Workflow } from 'lucide-react';
+import { useLanguage } from '@/contexts/LanguageContext';
 
 const FeaturesSection: React.FC = () => {
+  const { t } = useLanguage();
+  
   return (
     <section id="features" className="py-20 relative bg-braindark-900">
       <div className="absolute inset-0 bg-blue-gradient opacity-20"></div>
       
       <div className="section-container relative z-10">
         <div className="text-center mb-16 animate-fade-in">
-          <p className="section-title">Why Choose Us</p>
+          <p className="section-title">{t('whyChooseUs')}</p>
           <h2 className="section-heading">
-            Our <span className="heading-gradient">Unique Advantage</span>
+            {t('ourUnique')} <span className="heading-gradient">{t('uniqueAdvantage')}</span>
           </h2>
           <p className="section-description mx-auto">
-            What sets Brain Army AI apart from other AI solution providers? Our commitment to excellence, ethics, and results-driven innovation.
+            {t('featuresDescription')}
           </p>
         </div>
         
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-20">
           {features.map((feature, index) => (
             <div 
-              key={feature.title}
+              key={feature.titleKey}
               className="feature-card animate-fade-in"
               style={{ animationDelay: `${index * 0.1}s` }}
             >
@@ -32,8 +35,8 @@ const FeaturesSection: React.FC = () => {
                     <feature.icon className="w-8 h-8 text-brainblue-400" />
                   </div>
                   
-                  <h3 className="text-2xl font-bold mb-3">{feature.title}</h3>
-                  <p className="text-gray-400 mb-6">{feature.description}</p>
+                  <h3 className="text-2xl font-bold mb-3">{t(feature.titleKey)}</h3>
+                  <p className="text-gray-400 mb-6">{t(feature.descKey)}</p>
                   
                   <div className="mt-auto">
                     <ul className="space-y-2">
@@ -56,7 +59,7 @@ const FeaturesSection: React.FC = () => {
         {/* Clients Logos Section */}
         <div className="animate-fade-in">
           <div className="text-center mb-8">
-            <h3 className="text-xl font-semibold text-gray-200">Trusted by Industry Leaders</h3>
+            <h3 className="text-xl font-semibold text-gray-200">{t('trustedBy')}</h3>
           </div>
           
           <div className="py-6 px-4 glass-card rounded-xl">
@@ -77,8 +80,8 @@ const FeaturesSection: React.FC = () => {
 const features = [
   {
     icon: Shield,
-    title: "AI with Ethical Integrity",
-    description: "We prioritize transparency, fairness, and compliance in all our AI solutions, ensuring responsible implementation.",
+    titleKey: "ethicalIntegrity",
+    descKey: "ethicalDesc",
     points: [
       "Transparent AI systems with explainable outcomes",
       "Regular bias detection and mitigation",
@@ -88,8 +91,8 @@ const features = [
   },
   {
     icon: Scale,
-    title: "Scalable & Customizable",
-    description: "Our solutions are designed to grow with your business, adapting to your evolving needs and challenges.",
+    titleKey: "scalableCustomizable",
+    descKey: "scalableDesc",
     points: [
       "Flexible architecture that scales with your demands",
       "Customizable models tailored to your industry",
@@ -99,8 +102,8 @@ const features = [
   },
   {
     icon: Award,
-    title: "Proven Expertise",
-    description: "Our team of AI researchers, engineers, and business strategists brings depth of experience across industries.",
+    titleKey: "provenExpertise",
+    descKey: "expertiseDesc",
     points: [
       "Multidisciplinary team with specialized knowledge",
       "Experience across diverse industry verticals",
@@ -110,8 +113,8 @@ const features = [
   },
   {
     icon: Workflow,
-    title: "Seamless Integration",
-    description: "Our AI solutions work harmoniously with your existing tools and workflows, minimizing disruption.",
+    titleKey: "seamlessIntegration",
+    descKey: "integrationDesc",
     points: [
       "API-first approach for flexible integration",
       "Compatible with major technology stacks",

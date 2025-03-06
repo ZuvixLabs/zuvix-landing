@@ -2,8 +2,11 @@
 import React from 'react';
 import { Brain, TrendingUp, ShieldCheck, Code } from 'lucide-react';
 import AnimatedGradient from './ui/AnimatedGradient';
+import { useLanguage } from '@/contexts/LanguageContext';
 
 const AboutSection: React.FC = () => {
+  const { t } = useLanguage();
+  
   return (
     <section id="about" className="relative py-20">
       {/* Background Accent */}
@@ -12,12 +15,12 @@ const AboutSection: React.FC = () => {
       
       <div className="section-container">
         <div className="text-center mb-16 animate-fade-in">
-          <p className="section-title">About Us</p>
+          <p className="section-title">{t('aboutUs')}</p>
           <h2 className="section-heading">
-            The Intelligence <span className="heading-gradient">Evolution</span>
+            {t('intelligenceEvolution')} <span className="heading-gradient">{t('intelligenceEvolutionGradient')}</span>
           </h2>
           <p className="section-description mx-auto">
-            Brain Army AI is at the forefront of AI innovation, developing next-generation solutions for businesses seeking automation, data intelligence, and strategic AI adoption.
+            {t('aboutDescription')}
           </p>
         </div>
         
@@ -33,8 +36,8 @@ const AboutSection: React.FC = () => {
                   <div className="p-2 mb-4 rounded-md w-fit bg-gradient-to-br from-braindark-800 to-braindark-900 border border-braindark-700">
                     <card.icon className="w-6 h-6 text-brainblue-400" />
                   </div>
-                  <h3 className="text-xl font-bold mb-2">{card.title}</h3>
-                  <p className="text-gray-400 text-sm flex-grow">{card.description}</p>
+                  <h3 className="text-xl font-bold mb-2">{t(card.titleKey)}</h3>
+                  <p className="text-gray-400 text-sm flex-grow">{t(card.descKey)}</p>
                 </div>
               </AnimatedGradient>
             </div>
@@ -45,12 +48,12 @@ const AboutSection: React.FC = () => {
         <div className="mt-20 grid grid-cols-2 lg:grid-cols-4 gap-6">
           {stats.map((stat, index) => (
             <div 
-              key={stat.value} 
+              key={stat.valueKey} 
               className="glass-card p-6 text-center animate-fade-in"
               style={{ animationDelay: `${index * 0.1}s` }}
             >
-              <div className="text-3xl font-bold mb-1 text-gradient">{stat.value}</div>
-              <div className="text-sm text-gray-400">{stat.label}</div>
+              <div className="text-3xl font-bold mb-1 text-gradient">{t(stat.valueKey)}</div>
+              <div className="text-sm text-gray-400">{t(stat.labelKey)}</div>
             </div>
           ))}
         </div>
@@ -63,30 +66,38 @@ const aboutCards = [
   {
     icon: Brain,
     title: "Machine Learning",
-    description: "Develop custom AI models that continuously learn and adapt to your business needs and data patterns."
+    titleKey: "machineLearningTitle",
+    description: "Develop custom AI models that continuously learn and adapt to your business needs and data patterns.",
+    descKey: "machineLearningDesc"
   },
   {
     icon: Code,
     title: "AI Automation",
-    description: "Automate complex tasks and workflows with intelligent systems that boost efficiency and reduce errors."
+    titleKey: "aiAutomationTitle",
+    description: "Automate complex tasks and workflows with intelligent systems that boost efficiency and reduce errors.",
+    descKey: "aiAutomationDesc"
   },
   {
     icon: TrendingUp,
     title: "Predictive Analytics",
-    description: "Harness the power of data to forecast trends, identify opportunities, and make proactive business decisions."
+    titleKey: "predictiveAnalyticsTitle",
+    description: "Harness the power of data to forecast trends, identify opportunities, and make proactive business decisions.",
+    descKey: "predictiveAnalyticsDesc"
   },
   {
     icon: ShieldCheck,
     title: "AI Ethics",
-    description: "Implement responsible AI systems with built-in fairness, accountability, transparency, and data privacy."
+    titleKey: "aiEthicsTitle",
+    description: "Implement responsible AI systems with built-in fairness, accountability, transparency, and data privacy.",
+    descKey: "aiEthicsDesc"
   }
 ];
 
 const stats = [
-  { value: "95%", label: "Accuracy in Predictions" },
-  { value: "58%", label: "Average Cost Reduction" },
-  { value: "124+", label: "Enterprise Clients" },
-  { value: "10M+", label: "Data Points Processed Daily" }
+  { value: "95%", valueKey: "accuracyStat", label: "Accuracy in Predictions", labelKey: "accuracyLabel" },
+  { value: "58%", valueKey: "costReductionStat", label: "Average Cost Reduction", labelKey: "costReductionLabel" },
+  { value: "124+", valueKey: "clientsStat", label: "Enterprise Clients", labelKey: "clientsLabel" },
+  { value: "10M+", valueKey: "dataPointsStat", label: "Data Points Processed Daily", labelKey: "dataPointsLabel" }
 ];
 
 export default AboutSection;

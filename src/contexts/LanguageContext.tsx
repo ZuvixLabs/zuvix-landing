@@ -4,7 +4,8 @@ import { enTranslations } from '@/translations/en';
 import { esTranslations } from '@/translations/es';
 
 export type Language = 'en' | 'es';
-export type TranslationKey = keyof typeof enTranslations;
+// Change from specific keys to any string
+export type TranslationKey = string;
 
 interface LanguageContextType {
   language: Language;
@@ -23,7 +24,7 @@ export const LanguageProvider: React.FC<{ children: ReactNode }> = ({ children }
 
   const t = (key: TranslationKey): string => {
     const translations = language === 'en' ? enTranslations : esTranslations;
-    return translations[key] || key;
+    return translations[key as keyof typeof translations] || key;
   };
 
   return (

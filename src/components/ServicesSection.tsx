@@ -1,20 +1,23 @@
 
 import React from 'react';
 import { ArrowRight, Zap, TrendingUp, MessageSquare, Lightbulb } from 'lucide-react';
+import { useLanguage } from '@/contexts/LanguageContext';
 
 const ServicesSection: React.FC = () => {
+  const { t } = useLanguage();
+  
   return (
     <section id="services" className="relative py-20 bg-braindark-900">
       <div className="absolute inset-0 bg-blue-gradient opacity-20"></div>
       
       <div className="section-container relative z-10">
         <div className="text-center mb-16 animate-fade-in">
-          <p className="section-title">Our Solutions</p>
+          <p className="section-title">{t('ourSolutions')}</p>
           <h2 className="section-heading">
-            Transformative <span className="heading-gradient">AI Solutions</span>
+            {t('transformativeAI')} <span className="heading-gradient">{t('transformativeAIGradient')}</span>
           </h2>
           <p className="section-description mx-auto">
-            Our comprehensive suite of AI services is designed to solve complex business challenges and drive innovation across your organization.
+            {t('servicesDescription')}
           </p>
         </div>
         
@@ -29,8 +32,8 @@ const ServicesSection: React.FC = () => {
                 <service.icon className="w-8 h-8 text-brainblue-400 group-hover:text-brainblue-300 transition-colors duration-300" />
               </div>
               
-              <h3 className="text-2xl font-bold mb-3">{service.title}</h3>
-              <p className="text-gray-400 mb-6">{service.description}</p>
+              <h3 className="text-2xl font-bold mb-3">{t(service.title)}</h3>
+              <p className="text-gray-400 mb-6">{t(service.description)}</p>
               
               <div className="flex flex-wrap gap-3 mb-6">
                 {service.features.map((feature) => (
@@ -41,7 +44,7 @@ const ServicesSection: React.FC = () => {
               </div>
               
               <a href="#contact" className="inline-flex items-center text-brainblue-400 hover:text-brainblue-300 transition-colors duration-300 group/link">
-                Learn more 
+                {t('learnMore')} 
                 <ArrowRight className="ml-2 w-4 h-4 transition-transform duration-300 group-hover/link:translate-x-1" />
               </a>
             </div>
@@ -55,26 +58,26 @@ const ServicesSection: React.FC = () => {
 const services = [
   {
     icon: Zap,
-    title: "AI-Powered Automation",
-    description: "Streamline workflows with intelligent automation that learns and adapts to your business processes, reducing manual tasks and increasing productivity.",
+    title: "aiPoweredAutomation",
+    description: "automationDesc",
     features: ["Workflow Optimization", "Document Processing", "Quality Control", "Intelligent Scheduling"]
   },
   {
     icon: TrendingUp,
-    title: "Predictive Analytics",
-    description: "Leverage AI-driven insights to make data-backed decisions, identify trends, and forecast outcomes with unprecedented accuracy.",
+    title: "predAnalyticsTitle",
+    description: "predAnalyticsDesc",
     features: ["Market Forecasting", "Risk Assessment", "Customer Behavior", "Performance Metrics"]
   },
   {
     icon: MessageSquare,
-    title: "Conversational AI",
-    description: "Enhance customer engagement with advanced chatbots and virtual assistants that understand context, learn from interactions, and provide personalized responses.",
+    title: "conversationalAI",
+    description: "conversationalDesc",
     features: ["Customer Support", "Virtual Assistants", "Multilingual Support", "Sentiment Analysis"]
   },
   {
     icon: Lightbulb,
-    title: "AI Consulting",
-    description: "Develop tailored strategies to integrate AI into your business with our expert guidance, from initial assessment to full implementation and optimization.",
+    title: "aiConsulting",
+    description: "consultingDesc",
     features: ["Strategy Development", "Implementation", "Staff Training", "Performance Monitoring"]
   }
 ];

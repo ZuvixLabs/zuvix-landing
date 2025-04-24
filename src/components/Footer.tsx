@@ -1,4 +1,3 @@
-
 import React from 'react';
 import { useLanguage } from '@/contexts/LanguageContext';
 
@@ -13,9 +12,9 @@ const Footer: React.FC = () => {
           <div className="lg:col-span-2">
             <div className="flex items-center gap-2 mb-4">
               <div className="w-9 h-9 rounded-md bg-gradient-to-br from-brainblue-600 to-neon-blue flex items-center justify-center">
-                <span className="text-white font-bold text-xl">B</span>
+                <span className="text-white font-bold text-xl">Z</span>
               </div>
-              <span className="text-xl font-bold text-white">Brain Army AI</span>
+              <span className="text-xl font-bold text-white">Zuvix Labs</span>
             </div>
             <p className="text-gray-400 mb-6 max-w-sm">
               {t('empoweringBusinesses')}
@@ -91,7 +90,7 @@ const Footer: React.FC = () => {
         <div className="mt-12 pt-8 border-t border-braindark-800">
           <div className="flex flex-col md:flex-row justify-between items-center">
             <p className="text-gray-500 text-sm mb-4 md:mb-0">
-              &copy; {currentYear} Brain Army AI. {t('allRightsReserved')}
+              &copy; {currentYear} Zuvix Labs. {t('allRightsReserved')}
             </p>
             <div className="flex gap-6">
               {[

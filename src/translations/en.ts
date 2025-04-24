@@ -1,4 +1,3 @@
-
 export const enTranslations = {
   // Navbar
   "home": "Home",
@@ -12,7 +11,7 @@ export const enTranslations = {
   "heroTagline": "Advanced AI Technology",
   "heroTitle": "Empower Intelligence.",
   "heroTitleGradient": "Transform the Future.",
-  "heroDescription": "Brain Army AI leverages the power of artificial intelligence to optimize decision-making, automate processes, and revolutionize industries.",
+  "heroDescription": "Zuvix Labs leverages the power of artificial intelligence to optimize decision-making, automate processes, and revolutionize industries.",
   "getStarted": "Get Started",
   "viewSolutions": "View Solutions",
   "machineLearning": "Machine Learning",
@@ -24,7 +23,7 @@ export const enTranslations = {
   "aboutUs": "About Us",
   "intelligenceEvolution": "The Intelligence",
   "intelligenceEvolutionGradient": "Evolution",
-  "aboutDescription": "Brain Army AI is at the forefront of AI innovation, developing next-generation solutions for businesses seeking automation, data intelligence, and strategic AI adoption.",
+  "aboutDescription": "Zuvix Labs is at the forefront of AI innovation, developing next-generation solutions for businesses seeking automation, data intelligence, and strategic AI adoption.",
   
   // About Cards
   "machineLearningTitle": "Machine Learning",
@@ -88,7 +87,7 @@ export const enTranslations = {
   "whyChooseUs": "Why Choose Us",
   "ourUnique": "Our",
   "uniqueAdvantage": "Unique Advantage",
-  "featuresDescription": "What sets Brain Army AI apart from other AI solution providers? Our commitment to excellence, ethics, and results-driven innovation.",
+  "featuresDescription": "What sets Zuvix Labs apart from other AI solution providers? Our commitment to excellence, ethics, and results-driven innovation.",
   "trustedBy": "Trusted by Industry Leaders",
   
   // Feature Cards
@@ -105,7 +104,7 @@ export const enTranslations = {
   "successStories": "Success Stories",
   "whatOurClients": "What Our",
   "clientsSay": "Clients Say",
-  "testimonialsDescription": "Discover how Brain Army AI has helped organizations achieve their goals and transform their operations.",
+  "testimonialsDescription": "Discover how Zuvix Labs has helped organizations achieve their goals and transform their operations.",
   "readCaseStudy": "Read case study",
   "results": "Results:",
   
@@ -113,7 +112,7 @@ export const enTranslations = {
   "readyToRevolutionize": "Ready to",
   "revolutionize": "Revolutionize",
   "yourBusiness": "Your Business with AI?",
-  "ctaDescription": "Join leading organizations that are transforming their operations and driving innovation with Brain Army AI solutions.",
+  "ctaDescription": "Join leading organizations that are transforming their operations and driving innovation with Zuvix Labs solutions.",
   "requestDemo": "Request a Demo",
   "talkToExpert": "Talk to an Expert",
   "averageROI": "Average ROI",

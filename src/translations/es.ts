@@ -1,4 +1,3 @@
-
 export const esTranslations = {
   // Navbar
   "home": "Inicio",
@@ -12,7 +11,7 @@ export const esTranslations = {
   "heroTagline": "Tecnología Avanzada de IA",
   "heroTitle": "Potencia la Inteligencia.",
   "heroTitleGradient": "Transforma el Futuro.",
-  "heroDescription": "Brain Army AI aprovecha el poder de la inteligencia artificial para optimizar la toma de decisiones, automatizar procesos y revolucionar industrias.",
+  "heroDescription": "Zuvix Labs aprovecha el poder de la inteligencia artificial para optimizar la toma de decisiones, automatizar procesos y revolucionar industrias.",
   "getStarted": "Comenzar",
   "viewSolutions": "Ver Soluciones",
   "machineLearning": "Aprendizaje Automático",

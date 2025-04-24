@@ -1,4 +1,3 @@
-
 import { useState, useEffect } from 'react';
 import { Menu, X, Globe } from 'lucide-react';
 import { cn } from '@/lib/utils';
@@ -40,9 +39,9 @@ export default function Navbar() {
         <div className="flex items-center justify-between">
           <div className="flex items-center gap-2">
             <div className="w-9 h-9 rounded-md bg-gradient-to-br from-brainblue-600 to-neon-blue flex items-center justify-center">
-              <span className="text-white font-bold text-xl">B</span>
+              <span className="text-white font-bold text-xl">Z</span>
             </div>
-            <span className="text-xl font-bold text-white">Brain Army AI</span>
+            <span className="text-xl font-bold text-white">Zuvix Labs</span>
           </div>
 
           {/* Desktop Navigation */}

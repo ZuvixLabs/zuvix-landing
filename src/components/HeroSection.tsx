@@ -1,3 +1,4 @@
+
 import React from 'react';
 import { ArrowRight, Brain, Zap, Database, Shield } from 'lucide-react';
 import { useLanguage } from '@/contexts/LanguageContext';
@@ -30,7 +31,7 @@ const HeroSection: React.FC = () => {
               </h1>
               
               <p className="text-lg text-gray-300">
-                {t('heroDescription')}
+                {t('heroDescription').replace('Brain Army AI', 'Zuvix Labs')}
               </p>
               
               <div className="flex flex-wrap gap-4 pt-2">

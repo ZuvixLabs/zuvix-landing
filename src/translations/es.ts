@@ -23,7 +23,7 @@ export const esTranslations = {
   "aboutUs": "Nosotros",
   "intelligenceEvolution": "La Evolución de la",
   "intelligenceEvolutionGradient": "Inteligencia",
-  "aboutDescription": "Brain Army AI está a la vanguardia de la innovación en IA, desarrollando soluciones de próxima generación para empresas que buscan automatización, inteligencia de datos y adopción estratégica de IA.",
+  "aboutDescription": "Zuvix Labs está a la vanguardia de la innovación en IA, desarrollando soluciones de próxima generación para empresas que buscan automatización, inteligencia de datos y adopción estratégica de IA.",
   
   // About Cards
   "machineLearningTitle": "Aprendizaje Automático",
@@ -87,7 +87,7 @@ export const esTranslations = {
   "whyChooseUs": "Por Qué Elegirnos",
   "ourUnique": "Nuestra",
   "uniqueAdvantage": "Ventaja Única",
-  "featuresDescription": "¿Qué distingue a Brain Army AI de otros proveedores de soluciones de IA? Nuestro compromiso con la excelencia, la ética y la innovación orientada a resultados.",
+  "featuresDescription": "¿Qué distingue a Zuvix Labs de otros proveedores de soluciones de IA? Nuestro compromiso con la excelencia, la ética y la innovación orientada a resultados.",
   "trustedBy": "De Confianza para Líderes de la Industria",
   
   // Feature Cards
@@ -104,7 +104,7 @@ export const esTranslations = {
   "successStories": "Casos de Éxito",
   "whatOurClients": "Lo Que Dicen",
   "clientsSay": "Nuestros Clientes",
-  "testimonialsDescription": "Descubra cómo Brain Army AI ha ayudado a organizaciones a alcanzar sus objetivos y transformar sus operaciones.",
+  "testimonialsDescription": "Descubra cómo Zuvix Labs ha ayudado a organizaciones a alcanzar sus objetivos y transformar sus operaciones.",
   "readCaseStudy": "Leer caso de estudio",
   "results": "Resultados:",
   
@@ -112,7 +112,7 @@ export const esTranslations = {
   "readyToRevolutionize": "¿Listo para",
   "revolutionize": "Revolucionar",
   "yourBusiness": "Tu Negocio con IA?",
-  "ctaDescription": "Únase a organizaciones líderes que están transformando sus operaciones e impulsando la innovación con las soluciones de Brain Army AI.",
+  "ctaDescription": "Únase a organizaciones líderes que están transformando sus operaciones e impulsando la innovación con las soluciones de Zuvix Labs.",
   "requestDemo": "Solicitar una Demo",
   "talkToExpert": "Hablar con un Experto",
   "averageROI": "ROI Promedio",

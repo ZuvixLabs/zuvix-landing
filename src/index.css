@@ -77,12 +77,12 @@
   body {
     @apply bg-braindark-950 text-white font-sans antialiased;
     background-image: 
-      radial-gradient(circle at 15% 50%, rgba(28, 50, 204, 0.05) 0%, transparent 25%),
-      radial-gradient(circle at 85% 30%, rgba(28, 50, 204, 0.05) 0%, transparent 25%);
+      radial-gradient(circle at 15% 50%, rgba(31, 76, 213, 0.05) 0%, transparent 25%),
+      radial-gradient(circle at 85% 30%, rgba(147, 205, 45, 0.05) 0%, transparent 25%);
   }
   
   a, button, input, textarea {
-    @apply focus:outline-none focus:ring-2 focus:ring-brainblue-600 focus:ring-offset-2 focus:ring-offset-braindark-900;
+    @apply focus:outline-none focus:ring-2 focus:ring-zuvixBlue-600 focus:ring-offset-2 focus:ring-offset-braindark-900;
   }
 }
 
@@ -92,23 +92,23 @@
   }
   
   .feature-card {
-    @apply rounded-xl glass-card overflow-hidden transition-all duration-300 hover:border-brainblue-700 hover:shadow-neon-blue;
+    @apply rounded-xl glass-card overflow-hidden transition-all duration-300 hover:border-zuvixBlue-700 hover:shadow-neon-blue;
   }
   
   .btn-primary {
-    @apply relative inline-flex h-12 items-center justify-center overflow-hidden rounded-md bg-brainblue-600 px-6 font-medium text-white transition-all hover:bg-brainblue-700 active:scale-95;
+    @apply relative inline-flex h-12 items-center justify-center overflow-hidden rounded-md bg-zuvixBlue-600 px-6 font-medium text-white transition-all hover:bg-zuvixBlue-700 active:scale-95;
   }
   
   .btn-outline {
-    @apply relative inline-flex h-12 items-center justify-center overflow-hidden rounded-md border border-brainblue-700 bg-transparent px-6 font-medium text-brainblue-400 transition-all hover:bg-brainblue-900/20 hover:text-brainblue-300 active:scale-95;
+    @apply relative inline-flex h-12 items-center justify-center overflow-hidden rounded-md border border-zuvixBlue-700 bg-transparent px-6 font-medium text-zuvixBlue-400 transition-all hover:bg-zuvixBlue-900/20 hover:text-zuvixBlue-300 active:scale-95;
   }
   
   .heading-gradient {
-    @apply bg-gradient-to-r from-brainblue-400 to-neon-blue bg-clip-text text-transparent;
+    @apply bg-gradient-to-r from-zuvixBlue-500 to-zuvixGreen-500 bg-clip-text text-transparent;
   }
 
   .text-gradient {
-    @apply bg-gradient-to-r from-brainblue-300 to-brainblue-500 bg-clip-text text-transparent;
+    @apply bg-gradient-to-r from-zuvixBlue-400 to-zuvixBlue-600 bg-clip-text text-transparent;
   }
   
   .section-container {
@@ -116,7 +116,7 @@
   }
   
   .section-title {
-    @apply mb-3 text-sm uppercase tracking-wider text-brainblue-400;
+    @apply mb-3 text-sm uppercase tracking-wider text-zuvixBlue-400;
   }
   
   .section-heading {

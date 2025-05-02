@@ -11,10 +11,11 @@ const Footer: React.FC = () => {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-10">
           <div className="lg:col-span-2">
             <div className="flex items-center gap-2 mb-4">
-              <div className="w-9 h-9 rounded-md bg-gradient-to-br from-brainblue-600 to-neon-blue flex items-center justify-center">
-                <span className="text-white font-bold text-xl">Z</span>
-              </div>
-              <span className="text-xl font-bold text-white">Zuvix Labs</span>
+              <img 
+                src="/lovable-uploads/29141cd3-4b16-42f8-a8db-781f065b6d32.png" 
+                alt="Zuvix Labs Logo" 
+                className="h-8" 
+              />
             </div>
             <p className="text-gray-400 mb-6 max-w-sm">
               {t('empoweringBusinesses')}
@@ -42,7 +43,7 @@ const Footer: React.FC = () => {
                 { key: 'aiConsulting', href: '#services' }
               ].map((item) => (
                 <li key={item.key}>
-                  <a href={item.href} className="text-gray-400 hover:text-brainblue-400 transition-colors">
+                  <a href={item.href} className="text-gray-400 hover:text-zuvixGreen-400 transition-colors">
                     {t(item.key)}
                   </a>
                 </li>
@@ -61,7 +62,7 @@ const Footer: React.FC = () => {
                 { key: 'marketing', href: '#industries' }
               ].map((item) => (
                 <li key={item.key}>
-                  <a href={item.href} className="text-gray-400 hover:text-brainblue-400 transition-colors">
+                  <a href={item.href} className="text-gray-400 hover:text-zuvixGreen-400 transition-colors">
                     {t(item.key)}
                   </a>
                 </li>
@@ -78,7 +79,7 @@ const Footer: React.FC = () => {
                 { key: 'getInTouch', href: '#contact' }
               ].map((item) => (
                 <li key={item.key}>
-                  <a href={item.href} className="text-gray-400 hover:text-brainblue-400 transition-colors">
+                  <a href={item.href} className="text-gray-400 hover:text-zuvixGreen-400 transition-colors">
                     {t(item.key)}
                   </a>
                 </li>
@@ -98,7 +99,7 @@ const Footer: React.FC = () => {
                 { key: 'termsOfService', href: '#' },
                 { key: 'cookiePolicy', href: '#' }
               ].map((item) => (
-                <a key={item.key} href={item.href} className="text-gray-500 hover:text-brainblue-400 text-sm transition-colors">
+                <a key={item.key} href={item.href} className="text-gray-500 hover:text-zuvixGreen-400 text-sm transition-colors">
                   {t(item.key)}
                 </a>
               ))}

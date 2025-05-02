@@ -1,3 +1,4 @@
+
 #root {
   max-width: 1280px;
   margin: 0 auto;
@@ -5,38 +6,27 @@
   text-align: center;
 }
 
-.logo {
-  height: 6em;
-  padding: 1.5em;
-  will-change: filter;
-  transition: filter 300ms;
-}
-.logo:hover {
-  filter: drop-shadow(0 0 2em #646cffaa);
-}
-.logo.react:hover {
-  filter: drop-shadow(0 0 2em #61dafbaa);
-}
-
-@keyframes logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
+@layer base {
+  :root {
+    --zuvix-blue: #1F4CD5;
+    --zuvix-green: #93CD2D;
   }
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  a:nth-of-type(2) .logo {
-    animation: logo-spin infinite 20s linear;
+@layer components {
+  .heading-gradient {
+    @apply bg-gradient-to-r from-zuvixBlue-500 to-zuvixGreen-500 bg-clip-text text-transparent;
   }
-}
 
-.card {
-  padding: 2em;
-}
+  .text-gradient {
+    @apply bg-gradient-to-r from-zuvixBlue-400 to-zuvixBlue-600 bg-clip-text text-transparent;
+  }
 
-.read-the-docs {
-  color: #888;
+  .btn-primary {
+    @apply relative inline-flex h-12 items-center justify-center overflow-hidden rounded-md bg-zuvixBlue-600 px-6 font-medium text-white transition-all hover:bg-zuvixBlue-700 active:scale-95;
+  }
+  
+  .btn-outline {
+    @apply relative inline-flex h-12 items-center justify-center overflow-hidden rounded-md border border-zuvixBlue-700 bg-transparent px-6 font-medium text-zuvixBlue-400 transition-all hover:bg-zuvixBlue-900/20 hover:text-zuvixBlue-300 active:scale-95;
+  }
 }

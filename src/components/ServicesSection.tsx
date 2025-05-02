@@ -8,15 +8,15 @@ const ServicesSection: React.FC = () => {
   
   return (
     <section id="services" className="relative py-20 bg-braindark-900">
-      <div className="absolute inset-0 bg-blue-gradient opacity-20"></div>
+      <div className="absolute inset-0 bg-gradient-to-br from-zuvixBlue-900/20 to-zuvixGreen-900/20 opacity-20"></div>
       
       <div className="section-container relative z-10">
         <div className="text-center mb-16 animate-fade-in">
-          <p className="section-title">{t('ourSolutions')}</p>
-          <h2 className="section-heading">
-            {t('transformativeAI')} <span className="heading-gradient">{t('transformativeAIGradient')}</span>
+          <p className="text-zuvixBlue-400 mb-3 text-sm uppercase tracking-wider">{t('ourSolutions')}</p>
+          <h2 className="mb-6 text-3xl font-bold tracking-tight sm:text-4xl md:text-5xl">
+            {t('transformativeAI')} <span className="bg-gradient-to-r from-zuvixBlue-500 to-zuvixGreen-500 bg-clip-text text-transparent">{t('transformativeAIGradient')}</span>
           </h2>
-          <p className="section-description mx-auto">
+          <p className="max-w-3xl mx-auto text-lg text-gray-300">
             {t('servicesDescription')}
           </p>
         </div>
@@ -25,11 +25,11 @@ const ServicesSection: React.FC = () => {
           {services.map((service, index) => (
             <div 
               key={service.title}
-              className="glass-card p-8 rounded-xl border border-braindark-800 transition-all duration-300 hover:border-brainblue-700 group animate-fade-in"
+              className="glass-card p-8 rounded-xl border border-braindark-800 transition-all duration-300 hover:border-zuvixGreen-700 group animate-fade-in"
               style={{ animationDelay: `${index * 0.1}s` }}
             >
-              <div className="mb-6 w-16 h-16 rounded-lg flex items-center justify-center bg-gradient-to-br from-braindark-800 to-braindark-900 border border-braindark-700 group-hover:border-brainblue-700 transition-all duration-300">
-                <service.icon className="w-8 h-8 text-brainblue-400 group-hover:text-brainblue-300 transition-colors duration-300" />
+              <div className="mb-6 w-16 h-16 rounded-lg flex items-center justify-center bg-gradient-to-br from-braindark-800 to-braindark-900 border border-braindark-700 group-hover:border-zuvixGreen-700 transition-all duration-300">
+                <service.icon className="w-8 h-8 text-zuvixGreen-500 group-hover:text-zuvixGreen-400 transition-colors duration-300" />
               </div>
               
               <h3 className="text-2xl font-bold mb-3">{t(service.title)}</h3>
@@ -43,7 +43,7 @@ const ServicesSection: React.FC = () => {
                 ))}
               </div>
               
-              <a href="#contact" className="inline-flex items-center text-brainblue-400 hover:text-brainblue-300 transition-colors duration-300 group/link">
+              <a href="#contact" className="inline-flex items-center text-zuvixGreen-500 hover:text-zuvixGreen-400 transition-colors duration-300 group/link">
                 {t('learnMore')} 
                 <ArrowRight className="ml-2 w-4 h-4 transition-transform duration-300 group-hover/link:translate-x-1" />
               </a>

@@ -1,4 +1,3 @@
-
 import type { Config } from "tailwindcss";
 
 export default {
@@ -63,6 +62,34 @@ export default {
 					border: 'hsl(var(--sidebar-border))',
 					ring: 'hsl(var(--sidebar-ring))'
 				},
+                // Updated colors based on Zuvix Labs logo
+                zuvixBlue: {
+                    50: '#e6f0ff',
+                    100: '#cce0ff',
+                    200: '#99c2ff',
+                    300: '#66a3ff',
+                    400: '#3385ff',
+                    500: '#1F4CD5', // Primary blue from logo
+                    600: '#193da7',
+                    700: '#13307f',
+                    800: '#0d2257',
+                    900: '#06132e',
+                    950: '#030919',
+                },
+                zuvixGreen: {
+                    50: '#f0fae6',
+                    100: '#e0f5cc',
+                    200: '#c2eb99',
+                    300: '#93CD2D', // Primary green from logo
+                    400: '#7ab824',
+                    500: '#69a31f',
+                    600: '#578e19',
+                    700: '#456814',
+                    800: '#33420e',
+                    900: '#222c09',
+                    950: '#111604',
+                },
+                // Keep existing colors for backward compatibility
                 brainblue: {
                     50: '#f0f6ff',
                     100: '#e4eeff',
@@ -85,10 +112,10 @@ export default {
                     500: '#454c66',
                 },
                 neon: {
-                    blue: '#00eeff',
+                    blue: '#1F4CD5',
+                    green: '#93CD2D',
                     purple: '#8a2be2',
                     pink: '#ff00ff',
-                    green: '#00ff9d',
                 },
 			},
             fontFamily: {
@@ -155,14 +182,15 @@ export default {
                 'shimmer': 'shimmer 2s linear infinite',
 			},
             backgroundImage: {
-                'hero-pattern': 'radial-gradient(circle at 50% 50%, rgba(28, 50, 204, 0.2) 0%, rgba(8, 10, 20, 0) 50%)',
-                'neon-glow': 'linear-gradient(90deg, #00eeff, #8a2be2)',
+                'hero-pattern': 'radial-gradient(circle at 50% 50%, rgba(31, 76, 213, 0.2) 0%, rgba(8, 10, 20, 0) 50%)',
+                'neon-glow': 'linear-gradient(90deg, #1F4CD5, #93CD2D)',
                 'card-gradient': 'linear-gradient(135deg, rgba(26, 31, 44, 0.9) 0%, rgba(16, 19, 35, 0.95) 100%)',
-                'blue-gradient': 'linear-gradient(135deg, rgba(28, 50, 204, 0.5) 0%, rgba(78, 127, 255, 0.2) 100%)',
+                'blue-gradient': 'linear-gradient(135deg, rgba(31, 76, 213, 0.5) 0%, rgba(78, 127, 255, 0.2) 100%)',
                 'shimmer': 'linear-gradient(to right, rgba(255,255,255,0) 0%, rgba(255,255,255,0.05) 20%, rgba(255,255,255,0) 40%)',
             },
             boxShadow: {
-                'neon-blue': '0 0 10px rgba(0, 238, 255, 0.5)',
+                'neon-blue': '0 0 10px rgba(31, 76, 213, 0.5)',
+                'neon-green': '0 0 10px rgba(147, 205, 45, 0.5)',
                 'neon-purple': '0 0 10px rgba(138, 43, 226, 0.5)',
                 'glass': '0 0 20px rgba(0, 0, 0, 0.1)',
             },

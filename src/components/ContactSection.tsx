@@ -29,9 +29,9 @@ const ContactSection: React.FC = () => {
     
     try {
       // Replace these with your EmailJS service details
-      const serviceId = 'YOUR_EMAILJS_SERVICE_ID';
-      const templateId = 'YOUR_EMAILJS_TEMPLATE_ID';
-      const userId = 'YOUR_EMAILJS_USER_ID';
+      const serviceId = 'service_kl5zptn';
+      const templateId = 'template_ouavay7';
+      const userId = 'InZjkjORh5ajhp7uN';
       
       const templateParams = {
         from_name: formState.name,

@@ -1,4 +1,5 @@
-import React, { useState } from 'react';
+
+import React, { useState, useEffect } from 'react';
 import { Send, Mail, Phone, MapPin } from 'lucide-react';
 import { useLanguage } from '@/contexts/LanguageContext';
 import { useToast } from "@/hooks/use-toast";
@@ -7,6 +8,11 @@ import emailjs from 'emailjs-com';
 const ContactSection: React.FC = () => {
   const { t } = useLanguage();
   const { toast } = useToast();
+  
+  useEffect(() => {
+    // Initialize EmailJS with your user ID
+    emailjs.init("InZjkjORh5ajhp7uN");
+  }, []);
   
   const [formState, setFormState] = useState({
     name: '',
@@ -28,19 +34,22 @@ const ContactSection: React.FC = () => {
     setIsSubmitting(true);
     
     try {
-      // Replace these with your EmailJS service details
+      // EmailJS service details
       const serviceId = 'service_kl5zptn';
       const templateId = 'template_ouavay7';
-      const userId = 'InZjkjORh5ajhp7uN';
       
       const templateParams = {
         from_name: formState.name,
         reply_to: formState.email,
+        to_email: 'contacto@zuvixlabs.com',
         company: formState.company,
         message: formState.message
       };
       
-      await emailjs.send(serviceId, templateId, templateParams, userId);
+      console.log('Sending email with params:', templateParams);
+      
+      const result = await emailjs.send(serviceId, templateId, templateParams);
+      console.log('Email sent successfully:', result);
       
       setIsSubmitting(false);
       setIsSubmitted(true);

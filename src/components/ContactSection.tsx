@@ -2,9 +2,13 @@
 import React, { useState } from 'react';
 import { Send, Mail, Phone, MapPin } from 'lucide-react';
 import { useLanguage } from '@/contexts/LanguageContext';
+import { useToast } from "@/hooks/use-toast";
+import emailjs from 'emailjs-com';
 
 const ContactSection: React.FC = () => {
   const { t } = useLanguage();
+  const { toast } = useToast();
+  
   const [formState, setFormState] = useState({
     name: '',
     email: '',
@@ -20,12 +24,25 @@ const ContactSection: React.FC = () => {
     setFormState((prev) => ({ ...prev, [name]: value }));
   };
   
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     setIsSubmitting(true);
     
-    // Simulate API call
-    setTimeout(() => {
+    try {
+      // Replace these with your EmailJS service details
+      const serviceId = 'YOUR_EMAILJS_SERVICE_ID';
+      const templateId = 'YOUR_EMAILJS_TEMPLATE_ID';
+      const userId = 'YOUR_EMAILJS_USER_ID';
+      
+      const templateParams = {
+        from_name: formState.name,
+        reply_to: formState.email,
+        company: formState.company,
+        message: formState.message
+      };
+      
+      await emailjs.send(serviceId, templateId, templateParams, userId);
+      
       setIsSubmitting(false);
       setIsSubmitted(true);
       setFormState({
@@ -35,11 +52,25 @@ const ContactSection: React.FC = () => {
         message: ''
       });
       
+      toast({
+        title: "Message Sent Successfully",
+        description: "We'll get back to you as soon as possible!",
+      });
+      
       // Reset submission status after 3 seconds
       setTimeout(() => {
         setIsSubmitted(false);
       }, 3000);
-    }, 1000);
+    } catch (error) {
+      console.error('Error sending email:', error);
+      setIsSubmitting(false);
+      
+      toast({
+        title: "Error Sending Message",
+        description: "Please try again later or contact us directly via email.",
+        variant: "destructive",
+      });
+    }
   };
 
   return (

@@ -40,10 +40,11 @@ const ContactSection: React.FC = () => {
       
       const templateParams = {
         from_name: formState.name,
-        reply_to: formState.email,
-        to_email: 'contacto@zuvixlabs.com',
+        from_email: formState.email,
         company: formState.company,
-        message: formState.message
+        message: formState.message,
+        to_name: "Zuvix Labs Team",
+        to_email: "contacto@zuvixlabs.com"
       };
       
       console.log('Sending email with params:', templateParams);

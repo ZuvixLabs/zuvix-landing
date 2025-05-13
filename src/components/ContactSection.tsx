@@ -1,4 +1,3 @@
-
 import React, { useState } from 'react';
 import { Send, Mail, Phone, MapPin } from 'lucide-react';
 import { useLanguage } from '@/contexts/LanguageContext';
@@ -104,8 +103,8 @@ const ContactSection: React.FC = () => {
                   </div>
                   <div>
                     <h4 className="text-gray-200 font-medium">{t('emailUs')}</h4>
-                    <a href="mailto:info@brainarmy.ai" className="text-brainblue-400 hover:text-brainblue-300 transition-colors">
-                      info@brainarmy.ai
+                    <a href="mailto:contacto@zuvixlabs.com" className="text-brainblue-400 hover:text-brainblue-300 transition-colors">
+                      contacto@zuvixlabs.com
                     </a>
                   </div>
                 </div>

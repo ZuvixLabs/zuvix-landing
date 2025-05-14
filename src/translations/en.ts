@@ -100,6 +100,27 @@ export const enTranslations = {
   "seamlessIntegration": "Seamless Integration",
   "integrationDesc": "Our AI solutions work harmoniously with your existing tools and workflows, minimizing disruption.",
   
+  // Feature Points
+  "ethicalPoint1": "Transparent AI systems with explainable outcomes",
+  "ethicalPoint2": "Regular bias detection and mitigation",
+  "ethicalPoint3": "Privacy-preserving data handling practices",
+  "ethicalPoint4": "Compliance with global AI ethics standards",
+  
+  "scalablePoint1": "Flexible architecture that scales with your demands",
+  "scalablePoint2": "Customizable models tailored to your industry",
+  "scalablePoint3": "Modular approach for incremental implementation",
+  "scalablePoint4": "Cloud-native solutions for optimal performance",
+  
+  "expertisePoint1": "Multidisciplinary team with specialized knowledge",
+  "expertisePoint2": "Experience across diverse industry verticals",
+  "expertisePoint3": "Continuous research and development focus",
+  "expertisePoint4": "Combined decades of AI implementation expertise",
+  
+  "integrationPoint1": "API-first approach for flexible integration",
+  "integrationPoint2": "Compatible with major technology stacks",
+  "integrationPoint3": "Minimal disruption to existing operations",
+  "integrationPoint4": "Comprehensive onboarding and support",
+  
   // Testimonials Section
   "successStories": "Success Stories",
   "whatOurClients": "What Our",

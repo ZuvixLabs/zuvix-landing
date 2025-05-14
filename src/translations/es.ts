@@ -100,6 +100,27 @@ export const esTranslations = {
   "seamlessIntegration": "Integración Perfecta",
   "integrationDesc": "Nuestras soluciones de IA trabajan armoniosamente con sus herramientas y flujos de trabajo existentes, minimizando la interrupción.",
   
+  // Feature Points
+  "ethicalPoint1": "Sistemas de IA transparentes con resultados explicables",
+  "ethicalPoint2": "Detección y mitigación regular de sesgos",
+  "ethicalPoint3": "Prácticas de manejo de datos que preservan la privacidad",
+  "ethicalPoint4": "Conformidad con estándares globales de ética en IA",
+  
+  "scalablePoint1": "Arquitectura flexible que escala según sus demandas",
+  "scalablePoint2": "Modelos personalizables adaptados a su industria",
+  "scalablePoint3": "Enfoque modular para implementación incremental",
+  "scalablePoint4": "Soluciones nativas en la nube para un rendimiento óptimo",
+  
+  "expertisePoint1": "Equipo multidisciplinario con conocimiento especializado",
+  "expertisePoint2": "Experiencia en diversos sectores industriales",
+  "expertisePoint3": "Enfoque continuo en investigación y desarrollo",
+  "expertisePoint4": "Décadas combinadas de experiencia en implementación de IA",
+  
+  "integrationPoint1": "Enfoque API-first para integración flexible",
+  "integrationPoint2": "Compatible con las principales pilas tecnológicas",
+  "integrationPoint3": "Mínima interrupción de las operaciones existentes",
+  "integrationPoint4": "Incorporación y soporte integral",
+  
   // Testimonials Section
   "successStories": "Casos de Éxito",
   "whatOurClients": "Lo Que Dicen",

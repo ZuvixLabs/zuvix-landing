@@ -45,7 +45,7 @@ const FeaturesSection: React.FC = () => {
                           <div className="w-5 h-5 rounded-full bg-brainblue-900/50 border border-brainblue-700/30 flex items-center justify-center flex-shrink-0 mt-0.5">
                             <span className="text-brainblue-400 text-xs">✓</span>
                           </div>
-                          <span className="text-gray-300 text-sm">{point}</span>
+                          <span className="text-gray-300 text-sm">{t(point)}</span>
                         </li>
                       ))}
                     </ul>
@@ -83,10 +83,10 @@ const features = [
     titleKey: "ethicalIntegrity",
     descKey: "ethicalDesc",
     points: [
-      "Transparent AI systems with explainable outcomes",
-      "Regular bias detection and mitigation",
-      "Privacy-preserving data handling practices",
-      "Compliance with global AI ethics standards"
+      "ethicalPoint1",
+      "ethicalPoint2",
+      "ethicalPoint3",
+      "ethicalPoint4"
     ]
   },
   {
@@ -94,10 +94,10 @@ const features = [
     titleKey: "scalableCustomizable",
     descKey: "scalableDesc",
     points: [
-      "Flexible architecture that scales with your demands",
-      "Customizable models tailored to your industry",
-      "Modular approach for incremental implementation",
-      "Cloud-native solutions for optimal performance"
+      "scalablePoint1",
+      "scalablePoint2",
+      "scalablePoint3",
+      "scalablePoint4"
     ]
   },
   {
@@ -105,10 +105,10 @@ const features = [
     titleKey: "provenExpertise",
     descKey: "expertiseDesc",
     points: [
-      "Multidisciplinary team with specialized knowledge",
-      "Experience across diverse industry verticals",
-      "Continuous research and development focus",
-      "Combined decades of AI implementation expertise"
+      "expertisePoint1",
+      "expertisePoint2",
+      "expertisePoint3",
+      "expertisePoint4"
     ]
   },
   {
@@ -116,10 +116,10 @@ const features = [
     titleKey: "seamlessIntegration",
     descKey: "integrationDesc",
     points: [
-      "API-first approach for flexible integration",
-      "Compatible with major technology stacks",
-      "Minimal disruption to existing operations",
-      "Comprehensive onboarding and support"
+      "integrationPoint1",
+      "integrationPoint2",
+      "integrationPoint3",
+      "integrationPoint4"
     ]
   }
 ];

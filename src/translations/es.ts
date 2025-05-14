@@ -1,3 +1,4 @@
+
 export const esTranslations = {
   // Navbar
   "home": "Inicio",
@@ -82,6 +83,32 @@ export const esTranslations = {
   "manufacturingDesc": "Optimice los procesos de producción, asegure el control de calidad y prediga las necesidades de mantenimiento con nuestras soluciones industriales de IA.",
   "marketing": "Marketing y Ventas",
   "marketingDesc": "Impulse el crecimiento de ingresos con automatización de marketing impulsada por IA, información del cliente y estrategias de optimización de ventas.",
+  
+  // Industry Applications
+  "financeApp1": "Detección y prevención de fraudes",
+  "financeApp2": "Evaluación y gestión de riesgos",
+  "financeApp3": "Comercio automatizado y análisis de inversiones",
+  "financeApp4": "Experiencias bancarias personalizadas",
+  
+  "healthcareApp1": "Análisis de imágenes médicas y diagnósticos",
+  "healthcareApp2": "Información de datos de pacientes y análisis predictivo",
+  "healthcareApp3": "Descubrimiento y desarrollo de medicamentos",
+  "healthcareApp4": "Asistentes virtuales de salud y monitoreo",
+  
+  "retailApp1": "Recomendaciones de compra personalizadas",
+  "retailApp2": "Optimización de inventario y previsión de demanda",
+  "retailApp3": "Búsqueda visual y reconocimiento de productos",
+  "retailApp4": "Análisis de sentimiento del cliente",
+  
+  "manufacturingApp1": "Mantenimiento predictivo para reducir tiempos de inactividad",
+  "manufacturingApp2": "Control de calidad y detección de defectos",
+  "manufacturingApp3": "Optimización de la cadena de suministro",
+  "manufacturingApp4": "Automatización de procesos y eficiencia",
+  
+  "marketingApp1": "Segmentación y orientación de clientes",
+  "marketingApp2": "Puntuación y priorización de leads",
+  "marketingApp3": "Optimización y personalización de contenido",
+  "marketingApp4": "Análisis de rendimiento de campañas",
   
   // Features Section
   "whyChooseUs": "Por Qué Elegirnos",

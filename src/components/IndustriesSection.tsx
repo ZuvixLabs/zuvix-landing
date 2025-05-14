@@ -13,10 +13,10 @@ const IndustriesSection: React.FC = () => {
       name: t('finance'),
       description: t('financeDesc'),
       applications: [
-        "Fraud detection and prevention",
-        "Risk assessment and management",
-        "Automated trading and investment analysis",
-        "Personalized banking experiences"
+        t('financeApp1'),
+        t('financeApp2'),
+        t('financeApp3'),
+        t('financeApp4')
       ]
     },
     {
@@ -24,10 +24,10 @@ const IndustriesSection: React.FC = () => {
       name: t('healthcare'),
       description: t('healthcareDesc'),
       applications: [
-        "Medical imaging analysis and diagnostics",
-        "Patient data insights and predictive analytics",
-        "Drug discovery and development",
-        "Virtual health assistants and monitoring"
+        t('healthcareApp1'),
+        t('healthcareApp2'),
+        t('healthcareApp3'),
+        t('healthcareApp4')
       ]
     },
     {
@@ -35,10 +35,10 @@ const IndustriesSection: React.FC = () => {
       name: t('retail'),
       description: t('retailDesc'),
       applications: [
-        "Personalized shopping recommendations",
-        "Inventory optimization and demand forecasting",
-        "Visual search and product recognition",
-        "Customer sentiment analysis"
+        t('retailApp1'),
+        t('retailApp2'),
+        t('retailApp3'),
+        t('retailApp4')
       ]
     },
     {
@@ -46,10 +46,10 @@ const IndustriesSection: React.FC = () => {
       name: t('manufacturing'),
       description: t('manufacturingDesc'),
       applications: [
-        "Predictive maintenance to reduce downtime",
-        "Quality control and defect detection",
-        "Supply chain optimization",
-        "Process automation and efficiency"
+        t('manufacturingApp1'),
+        t('manufacturingApp2'),
+        t('manufacturingApp3'),
+        t('manufacturingApp4')
       ]
     },
     {
@@ -57,10 +57,10 @@ const IndustriesSection: React.FC = () => {
       name: t('marketing'),
       description: t('marketingDesc'),
       applications: [
-        "Customer segmentation and targeting",
-        "Lead scoring and prioritization",
-        "Content optimization and personalization",
-        "Campaign performance analysis"
+        t('marketingApp1'),
+        t('marketingApp2'),
+        t('marketingApp3'),
+        t('marketingApp4')
       ]
     }
   ];

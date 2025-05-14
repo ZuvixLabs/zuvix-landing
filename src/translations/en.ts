@@ -1,3 +1,4 @@
+
 export const enTranslations = {
   // Navbar
   "home": "Home",
@@ -82,6 +83,32 @@ export const enTranslations = {
   "manufacturingDesc": "Optimize production processes, ensure quality control, and predict maintenance needs with our industrial AI solutions.",
   "marketing": "Marketing & Sales",
   "marketingDesc": "Drive revenue growth with AI-powered marketing automation, customer insights, and sales optimization strategies.",
+  
+  // Industry Applications
+  "financeApp1": "Fraud detection and prevention",
+  "financeApp2": "Risk assessment and management",
+  "financeApp3": "Automated trading and investment analysis",
+  "financeApp4": "Personalized banking experiences",
+  
+  "healthcareApp1": "Medical imaging analysis and diagnostics",
+  "healthcareApp2": "Patient data insights and predictive analytics",
+  "healthcareApp3": "Drug discovery and development",
+  "healthcareApp4": "Virtual health assistants and monitoring",
+  
+  "retailApp1": "Personalized shopping recommendations",
+  "retailApp2": "Inventory optimization and demand forecasting",
+  "retailApp3": "Visual search and product recognition",
+  "retailApp4": "Customer sentiment analysis",
+  
+  "manufacturingApp1": "Predictive maintenance to reduce downtime",
+  "manufacturingApp2": "Quality control and defect detection",
+  "manufacturingApp3": "Supply chain optimization",
+  "manufacturingApp4": "Process automation and efficiency",
+  
+  "marketingApp1": "Customer segmentation and targeting",
+  "marketingApp2": "Lead scoring and prioritization",
+  "marketingApp3": "Content optimization and personalization",
+  "marketingApp4": "Campaign performance analysis",
   
   // Features Section
   "whyChooseUs": "Why Choose Us",
